@@ -1,0 +1,46 @@
+﻿@model eStudenti.Models.Kurset
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Kurset</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmriKursit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmriKursit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ligjerusi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ligjerusi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kredit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kredit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Statusi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Statusi)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="KursiId" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+        <a asp-action="Index" class="btn btn-outline-dark btn-sm">Back to List</a>
+    </form>
+</div>

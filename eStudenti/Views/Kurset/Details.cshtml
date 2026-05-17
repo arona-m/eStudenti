@@ -1,0 +1,50 @@
+﻿@model eStudenti.Models.Kurset
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Studentet</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmriKursit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmriKursit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ligjerusi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ligjerusi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kredit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kredit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Statusi)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.Statusi)
+            {
+                <span>Active</span>
+            }
+            else
+            {
+                <span>Inactive</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-outline-dark btn-sm" asp-route-id="@Model?.KursiId">Edit</a> |
+    <a asp-action="Index" class="btn btn-outline-dark btn-sm">Back to List</a>
+</div>

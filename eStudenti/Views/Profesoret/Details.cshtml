@@ -1,0 +1,62 @@
+﻿@model eStudenti.Models.Profesoret
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Profesoret</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfEmri)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfEmri)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfMbiemri)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfMbiemri)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfGjinia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfGjinia)
+        </dd>
+     
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfDataLindjes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfDataLindjes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfNumriTelefonit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfNumriTelefonit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TitulliAkademik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TitulliAkademik)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ProfId" class="btn btn-outline-dark btn-sm">Edit</a> |
+    <a asp-action="Index" class="btn btn-outline-dark btn-sm">Back to List</a>
+</div>

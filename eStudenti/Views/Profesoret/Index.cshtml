@@ -1,0 +1,73 @@
+﻿@model IEnumerable<eStudenti.Models.Profesoret>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-dark btn-sm">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfEmri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfMbiemri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfGjinia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfDataLindjes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfNumriTelefonit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TitulliAkademik)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfEmri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfMbiemri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfGjinia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfDataLindjes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfNumriTelefonit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TitulliAkademik)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProfId" class="btn btn-outline-secondary btn-sm">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProfId" class="btn btn-outline-info btn-sm">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProfId" class="btn btn-outline-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
